@@ -5,33 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLab_5_2_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="830">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition>
+            </RowDefinition>
         </Grid.RowDefinitions>
         <Menu Margin="5" Padding="5">
             <MenuItem Header="_Файл">
                 <MenuItem Header="_Открыть">
                     <MenuItem.Icon>
-                        <Image Source="/Data/iconOpen.png"/>
+                        <Image Source="Data/iconOpen.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="_Сохранить">
                     <MenuItem.Icon>
-                        <Image Source="/Data/iconSave.png" />
+                        <Image Source="Data/iconSave.png" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="_Выход">
                     <MenuItem.Icon>
-                        <Image Source="/Data/iconExit.png"/>
+                        <Image Source="Data/iconExit.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
-
         </Menu>
-        <InkCanvas x:Name="inkCanvas" Grid.Row="1">
+        <ToolBarTray Margin="5,0" Grid.Row="1" Height="Auto" >
+            <ToolBar Margin="5" Padding="5" >
+                <Button Click="Button_Click" >
+                    <Image Source="Data/iconLine.png"/>
+                </Button>
+                <Button Click="Button_Click_1" >
+                    <Image Source="Data/iconEraser.png"/>
+                </Button>
+                <Button Click="Button_Click_2" >
+                    <Image Source="Data/iconSelect.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <Button Margin="5" Width="35" Height="35" Background="Red" Click="Button_Click_3" />
+                <Button Margin="5" Width="35" Height="35" Background="Orange" Click="Button_Click_4" />
+                <Button Margin="5" Width="35" Height="35" Background="Yellow" Click="Button_Click_5" />
+                <Button Margin="5" Width="35" Height="35" Background="Green" Click="Button_Click_6" />
+                <Button Margin="5" Width="35" Height="35" Background="Blue" Click="Button_Click_7" />
+                <Button Margin="5" Width="35" Height="35" Background="Magenta" Click="Button_Click_8"  />
+            </ToolBar>
+            <ToolBar  Margin="5" Padding="5">
+                <Button Margin="5" Width="35" Height="35" Background="Black" Click="Button_Click_9" />
+                <Button Margin="5" Width="35" Height="35" Background="#333333" Click="Button_Click_10" />
+                <Button Margin="5" Width="35" Height="35" Background="#666666" />
+                <Button Margin="5" Width="35" Height="35" Background="#999999" />
+                <Button Margin="5" Width="35" Height="35" Background="#CCCCCC" />
+                <Button Margin="5" Width="35" Height="35" Background="#FFFFFF" />
+            </ToolBar>
+        </ToolBarTray>
+        <InkCanvas x:Name="inkCanvas" Grid.Row="2" >
+            
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes Color="Black"/>
+            </InkCanvas.DefaultDrawingAttributes>
         </InkCanvas>
     </Grid>
 </Window>

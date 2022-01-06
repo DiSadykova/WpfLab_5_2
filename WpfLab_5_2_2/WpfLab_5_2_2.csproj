@@ -8,15 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\iconEraser.png" />
     <None Remove="Data\iconExit.png" />
+    <None Remove="Data\iconLine.png" />
     <None Remove="Data\iconOpen.png" />
     <None Remove="Data\iconSave.png" />
+    <None Remove="Data\iconSelect.png" />
+    <None Remove="iconEraser.png" />
+    <None Remove="iconLine.png" />
+    <None Remove="iconSelect.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Data\iconEraser.png" />
     <Resource Include="Data\iconExit.png" />
+    <Resource Include="Data\iconLine.png" />
     <Resource Include="Data\iconOpen.png" />
     <Resource Include="Data\iconSave.png" />
+    <Resource Include="Data\iconSelect.png" />
   </ItemGroup>
 
 </Project>
